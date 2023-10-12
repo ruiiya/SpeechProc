@@ -49,13 +49,6 @@ def crawl_dantri(url: str):
         'source': None if not source else source.text.strip()
     }
 
-def uri_validator(x):
-    try:
-        result = urlparse(x)
-        return all([result.scheme, result.netloc])
-    except:
-        return False
-
 def check_url(url: str):
     try:
         result = urlparse(url)
